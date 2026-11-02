@@ -1,0 +1,33 @@
+CREATE DATABASE myhms;
+Use myhms;
+CREATE TABLE doclogin (uname VARCHAR(255),passwd VARCHAR(255));
+INSERT INTO doclogin (uname, passwd) VALUES('Manish', 'manish123'),('Ram', 'ram123'),('Priya', 'priya123'),('Anjali', 'anjali123'),('Ravi', 'ravi123'),('Karan', 'karan123'),('Sneha', 'sneha123'),('Rahul', 'rahul123');
+CREATE TABLE patlogin (uname VARCHAR(255),passwd VARCHAR(255));
+CREATE TABLE adminlogin (uname VARCHAR(255),passwd VARCHAR(255));
+CREATE TABLE appointments (Patientname VARCHAR(50),Doctorname VARCHAR(50),Date CHAR(10),Status VARCHAR(10) DEFAULT 'Pending',reason VARCHAR(50));
+CREATE TABLE patinfo (Name VARCHAR(50), Username VARCHAR(50), Date_of_Birth VARCHAR(10), Gender VARCHAR(15), Mobile_number CHAR(10), mail VARCHAR(30), Emergency_contact CHAR(10), Blood_Group VARCHAR(5), Address VARCHAR(50));
+CREATE TABLE prescriptions (uname_input VARCHAR(255) NOT NULL, date VARCHAR(10) NOT NULL, medicine_name VARCHAR(255) NOT NULL, dosage TEXT);
+CREATE TABLE staff (name VARCHAR(50), department VARCHAR(50), designation VARCHAR(50), docstat CHAR(1), salary INT, phno CHAR(10), sosno CHAR(12), bg VARCHAR(5), mail VARCHAR(30));
+INSERT INTO staff VALUES
+('Manish', 'Cardiology', 'General Surgeon', 'y', 200000, 9877976674, 9876434675, 'O+', 'manish123@gmail.com'),
+('Ram', 'ENT', 'ENT Specialist', 'y', 20000, 6789877788, 8769767876, 'B+', 'ram@gmail.com'),
+('Priya', 'Neurology', 'Neurosurgeon', 'y', 250000, 9898776655, 9876501234, 'A+', 'priya.neuro@gmail.com'),
+('Anjali', 'Pediatrics', 'Child Specialist', 'y', 150000, 9087654321, 9087654322, 'O-', 'anjali_ped@gmail.com'),
+('Ravi', 'Orthopedics', 'Ortho Surgeon', 'y', 180000, 9988776655, 9988776656, 'B-', 'ravi.ortho@gmail.com'),
+('Karan', 'Radiology', 'Radiologist', 'y', 130000, 9798989898, 9798989899, 'AB+', 'karanradio@gmail.com'),
+('Sneha', 'Gynecology', 'Gynecologist', 'y', 170000, 9765432198, 9765432199, 'A-', 'sneha.gyno@gmail.com'),
+('Rahul', 'Dermatology', 'Skin Specialist', 'y', 120000, 9876509876, 9876509877, 'B+', 'rahul.derma@gmail.com'),
+('Vikram', 'Emergency', 'Paramedic', 'n', 60000, 9898989890, 9898989891, 'O+', 'vikram_emer@gmail.com'),
+('Divya', 'Pharmacy', 'Pharmacist', 'n', 80000, 9123456789, 9123456790, 'AB-', 'divya.pharma@gmail.com');
+CREATE TABLE stocks (name VARCHAR(30), qty INT, mfd CHAR(10), exp CHAR(10), type VARCHAR(20), price INT);
+INSERT INTO stocks (name, qty, mfd, exp, type, price) VALUES
+('Paracetamol',60,'01/11/2025','01/01/2027','Tablet',25),
+('Amoxicillin',50,'05/09/2024','05/09/2026','Capsule',80),
+('Cough Syrup',15,'10/10/2025','10/10/2027','Liquid',120),
+('Vitamin C',60,'01/07/2025','01/07/2028','Tablet',150),
+('Insulin',10,'15/02/2025','15/02/2026','Injection',250),
+('Azithromycin',40,'20/03/2025','20/03/2027','Tablet',95),
+('Pain Relief Gel',25,'11/01/2025','11/01/2028','Ointment',75),
+('Antacid',80,'01/08/2024','01/08/2026','Tablet',60),
+('Cough Drops',100,'15/06/2025','15/06/2027','Lozenge',35),
+('Multivitamin',45,'25/12/2024','25/12/2027','Capsule',200);
